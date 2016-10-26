@@ -1,0 +1,36 @@
+
+<!-- <div class="carousel">
+  <a class="carousel-item" href="#one!"><img src="https://unsplash.com/search/dating?photo=9rHgOVRdrDM"></a>
+  <a class="carousel-item" href="#two!"><img src="https://unsplash.com/search/dating?photo=ihOBrSEdtx8"></a>
+  <a class="carousel-item" href="#three!"><img src="https://images.unsplash.com/photo-1444839368740-f0d3572f8067?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=d86a2a5489d523ab5b15439252795847"></a>
+  <a class="carousel-item" href="#four!"><img src="https://unsplash.com/collections/228643/romance?photo=1otDfVSZnlk"></a>
+  <a class="carousel-item" href="#five!"><img src="https://unsplash.com/collections/228643/romance?photo=K89617N_IvQ"></a>
+</div> -->
+
+
+  <div id="slides_control">
+    <div>
+      <carousel interval="myInterval">
+        <slide>
+          <img ng-src="{{mainCtrl.slides.image}}">
+        </slide>
+      </carousel>
+    </div>
+  </div>
+
+
+<div class="col s12 m7">
+  <div class="card horizontal">
+    <div class="card-image">
+      <img src="{{mainCtrl.oneMember.avatar}}">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>{{mainCtrl.oneMember.description}}</p>
+      </div>
+      <div class="card-action">
+        <h5>{{mainCtrl.oneMember.names.firstName | uppercase }}</h5>
+      </div>
+    </div>
+  </div>
+</div>

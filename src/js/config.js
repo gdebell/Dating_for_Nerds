@@ -13,6 +13,11 @@
       controller: 'mainController',
       controllerAs: 'mainCtrl'
     })
+    .when('/members', {
+      templateUrl: 'js/components/members/members.view.html',
+      controller: 'membersController',
+      controllerAs: 'memCtrl'
+    })
     .otherwise('/');
   }
 

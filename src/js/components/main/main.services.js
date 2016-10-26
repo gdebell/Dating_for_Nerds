@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('myApp.services.main', [])
+    .module('myApp.services.main', ['ui.bootstrap'])
     .service('MemberService', MemberService);
 
   MemberService.$inject = ['$http'];
@@ -18,6 +18,7 @@
       });
     };
 
+    this.currIndex = 0;
     this.photosArray = [
       {
         image: 'https://unsplash.com/collections/228643/romance?photo=K89617N_IvQ'
@@ -33,9 +34,6 @@
       },
       {
         image: 'https://unsplash.com/search/dating?photo=9rHgOVRdrDM'
-      }
-    ]
-
-
+      }];
   }
 }());

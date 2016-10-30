@@ -46,8 +46,8 @@
     .state('search', {
       url: '/search',
       templateUrl: 'js/components/members/search.view.html',
-      controller: 'searchController',
-      controllerAs: 'seaCtrl',
+      controller: 'membersController',
+      controllerAs: 'memCtrl',
       restricted: true
     });
   }

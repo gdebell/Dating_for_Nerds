@@ -5,9 +5,9 @@
     .module('myApp.components.register', [])
     .controller('logInController', logInController);
 
-  logInController.$inject = ['AuthService'];
+  logInController.$inject = ['AuthService', '$state'];
 
-  function logInController(AuthService) {
+  function logInController(AuthService, $state) {
     /*jshint validthis: true */
     console.log('you are in the log in controller!');
 
@@ -17,7 +17,9 @@
       .then((user) => {
         console.log('made it past .then!!');
         console.log(user);
+        console.log(user.data.data.user.names.firstName);
         localStorage.setItem('token', user.data.data.token);
+        $state.go('members');
       });
       this.user = {};
     };
@@ -29,6 +31,7 @@
       .then((newUser) => {
         console.log('Submitted new user to API!!');
         localStorage.setItem('token', newUser.data.data.token);
+        $state.go('members');
       });
       this.newUser = {};
     };

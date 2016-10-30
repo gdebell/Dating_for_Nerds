@@ -1,0 +1,21 @@
+.memberViewPage {
+  background-color: #e0e0e0;
+}
+
+.allMembers {
+  background-color: #fff8e1;
+}
+
+.descrip {
+  font-size: 10px;
+}
+
+.memView {
+  position: fixed;
+  top: 10;
+  display: inline-block;
+}
+
+.listMembers {
+  float: left;
+}

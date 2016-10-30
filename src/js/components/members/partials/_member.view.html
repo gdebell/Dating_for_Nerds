@@ -1,0 +1,26 @@
+<div class="memView">
+  <div class="row col s12" ng-controller="memberController as membCtrl">
+
+    <div class="row col s12 partialView">
+      <h5>Hello, my name is  {{membCtrl.person.selected.names.firstName}}</h5>
+    </div>
+    <div class="row col s12">
+      <div class="row col s7">
+        <p>My username is: {{membCtrl.person.selected.username}}</p>
+        <p>Looking For: {{membCtrl.person.interestedIn[0]}}</p>
+        <p>
+          <span ng-if="membCtrl.person.address"><a class="btn #a5d6a7 green lighten-3">Near You!</a></span>
+        </p>
+        <p>
+          <span ng-if="membCtrl.person._matches">Popular</span>
+        </p>
+      </div>
+      <div class="row col s5">
+        <img ng-src="{{membCtrl.person.selected.avatar}}">
+      </div>
+    </div>
+    <div class="row col s12">
+      <p class="descrip">About Me: {{membCtrl.person.selected.description}}</p>
+    </div>
+  </div>
+</div>

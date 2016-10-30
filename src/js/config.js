@@ -3,22 +3,67 @@
   'use strict';
 
   angular
-    .module('myApp.config', [])
-    .config(appConfig);
+    .module('myApp.config', ['ui.router'])
+    .config(appConfig)
+    .run(routeStart);
 
-  function appConfig($routeProvider) {
-    $routeProvider
-    .when('/', {
+  function appConfig($stateProvider, $urlRouterProvider) {
+    $stateProvider
+    .state('home', {
+      url: '/',
       templateUrl: 'js/components/main/main.view.html',
       controller: 'mainController',
-      controllerAs: 'mainCtrl'
+      controllerAs: 'mainCtrl',
+      restricted: false
     })
-    .when('/members', {
+    .state('members', {
+      url: '/members',
       templateUrl: 'js/components/members/members.view.html',
       controller: 'membersController',
-      controllerAs: 'memCtrl'
+      controllerAs: 'memCtrl',
+      restricted: true
     })
-    .otherwise('/');
+    .state('members.member', {
+      templateUrl: 'js/components/members/partials/_member.view.html',
+      controller: 'membersController',
+      controllerAs: 'memCtrl',
+      restricted: true
+    })
+    .state('register', {
+      url: '/register',
+      templateUrl: 'js/components/register/register.view.html',
+      controller: 'logInController',
+      controllerAs: 'logCtrl',
+      restricted: false
+    })
+    .state('login', {
+      url: '/login',
+      templateUrl: 'js/components/register/login.view.html',
+      controller: 'logInController',
+      controllerAs: 'logCtrl',
+      restricted: false
+    })
+    .state('search', {
+      url: '/search',
+      templateUrl: 'js/components/members/search.view.html',
+      controller: 'searchController',
+      controllerAs: 'seaCtrl',
+      restricted: true
+    });
+  }
+  //set user name to null
+  //localStorage.clear
+  //do that in service
+  function routeStart($rootScope, $state, AuthService, $location) {
+    $rootScope.$on('$stateChangeStart', function (event, toState, fromState) {
+      if (toState.restricted) {
+        if (!localStorage.getItem('token')) {
+          event.preventDefault();
+          $state.go('login');
+          console.log('inside if');
+        }
+      }
+    });
   }
 
 })();

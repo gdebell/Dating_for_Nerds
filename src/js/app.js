@@ -6,12 +6,14 @@
 
   angular
     .module('myApp', [
-      'ui.bootstrap',
-      'ngRoute',
+      'ui.materialize',
+      'ui.router',
       'myApp.config',
       'myApp.components.main',
       'myApp.components.members',
-      'myApp.services.main'
+      'myApp.services.main',
+      'myApp.components.register',
+      'myApp.service.auth'
     ]);
 
 })();

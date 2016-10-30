@@ -1,47 +1,48 @@
-<div class="row col s12" ng-style="{'background-color: #eceff1}">
-
-  <div class="row col s12">
-    <div class="carMainImage">
-    <div id="slides_control" ng-repeat="photo in mainCtrl.mainPagePhotos"  active="photo.active">
-      <div>
-        <carousel interval="3000">
-          <slide>
-            <img class=carousel ng-src="{{photo.image}}" height="200" width="100">
-            <h3 class="datingNerds">Dating for Nerds</h3>
-            <a href="/#/members" class="waves-light btn #b39ddb deep-purple lighten-3"><i class="material-icons left">favorite</i>Get Started<i class="material-icons right">favorite</i></a>
-          </slide>
-        </carousel>
+<div class="row col s12 mainView">
+  <div>
+    <nav>
+      <div class="nav-wrapper #b39ddb deep-purple lighten-3">
+        <a href="#" class="brand-logo">&nbsp;&nbsp;gDating</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/#/">Home</a></li>
+          <li><a href="/#/login">Login</a></li>
+          <li><a href="/#/register">Register</a></li>
+        </ul>
       </div>
-    </div>
-  </div>
-  </div>
-
-    <!-- <div style="height: 305px">
-      <div uib-carousel active="0" interval="1000" no-wrap="false">
-        <div uib-slide ng-repeat="photo in mainCtrl.mainPagePhotos" index="slide.id">
-          <img ng-src="{{photo.image}}" style="margin:auto;">
-          <div class="carousel-caption">
-            <h4>Slide {{photo.id}}</h4>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-
-  <div class="row col s12">
-  </br></br></br></br>
+    </nav>
   </div>
 
-  <div class="row col s12">
-  </br></br></br></br>
-  </div>
-
-  <div class="row col s12">
-  </br></br></br></br>
-  </div>
-
-  <div class="row col s12">
-  </br></br></br></br>
+  <div class="slider" slider>
+      <ul class="slides">
+          <li>
+              <img src="../../../css/membersPhotos/membersCourtHouseKiss.jpeg"> <!-- random image -->
+              <div class="caption center-align">
+                  <h3 class="datingNerds">Dating for Nerds</h3>
+                  <a href="/#/members" class="waves-light btn #b39ddb deep-purple lighten-3"><i class="material-icons left">favorite</i>Get Started<i class="material-icons right">favorite</i></a>
+              </div>
+          </li>
+          <li>
+              <img src="../../../css/membersPhotos/membersKissWoods.jpeg"> <!-- random image -->
+              <div class="caption left-align">
+                  <h3 class="datingNerds">Dating for Nerds</h3>
+                  <a href="/#/members" class="waves-light btn #b39ddb deep-purple lighten-3"><i class="material-icons left">favorite</i>Get Started<i class="material-icons right">favorite</i></a>
+              </div>
+          </li>
+          <li>
+                  <img src="../../../css/membersPhotos/membersVows.jpeg"> <!-- random image -->
+                  <div class="caption right-align">
+                  <h3 class="datingNerds">Dating for Nerds</h3>
+                  <a href="/#/members" class="waves-light btn #b39ddb deep-purple lighten-3"><i class="material-icons left">favorite</i>Get Started<i class="material-icons right">favorite</i></a>
+              </div>
+          </li>
+          <li>
+              <img src="../../../css/membersPhotos/membersHeart.jpeg"> <!-- random image -->
+              <div class="caption center-align">
+                  <h3 class="datingNerds">Dating for Nerds</h3>
+                  <a href="/#/members" class="waves-light btn #b39ddb deep-purple lighten-3"><i class="material-icons left">favorite</i>Get Started<i class="material-icons right">favorite</i></a>
+              </div>
+          </li>
+      </ul>
   </div>
 
   <div class="row col s12">
@@ -50,7 +51,7 @@
     <div class="row col s10">
       <div class="card horizontal">
         <div class="card-image">
-          <img src="{{mainCtrl.oneMember.avatar}}">
+          <img ng-src="{{mainCtrl.oneMember.avatar}}">
         </div>
         <div class="card-stacked">
           <div class="card-content">

@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('myApp.components.main', ['ui.bootstrap'])
+    .module('myApp.components.main', [])
     .controller('mainController', mainController);
 
   mainController.$inject = ['MemberService'];

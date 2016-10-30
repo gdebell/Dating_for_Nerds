@@ -19,6 +19,15 @@
         headers: {'Content-Type': 'application/json'}
       });
     };
+
+    this.register = function (newUser) {
+      return $http({
+        method: 'POST',
+        url:'https://galvanize-student-apis.herokuapp.com/gdating/auth/register',
+        data: newUser,
+        header: {'Content-Type': 'application/json'}
+      });
+    };
   }
 
 })();

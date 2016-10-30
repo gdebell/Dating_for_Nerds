@@ -51,16 +51,13 @@
       restricted: true
     });
   }
-  //set user name to null
-  //localStorage.clear
-  //do that in service
+
   function routeStart($rootScope, $state, AuthService, $location) {
     $rootScope.$on('$stateChangeStart', function (event, toState, fromState) {
       if (toState.restricted) {
         if (!localStorage.getItem('token')) {
           event.preventDefault();
           $state.go('login');
-          console.log('inside if');
         }
       }
     });

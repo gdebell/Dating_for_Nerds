@@ -11,6 +11,7 @@
     /*jshint validthis: true */
     console.log('you are in the log in controller!');
 
+    //login function
     this.onSubmit = function (loginInfo) {
       AuthService.checkAuth(loginInfo)
       .then((user) => {
@@ -24,23 +25,13 @@
     this.onClick = function (registerInfo) {
       console.log('you clicked the register button');
       console.log(registerInfo);
-
+      AuthService.register(registerInfo)
+      .then((newUser) => {
+        console.log('Submitted new user to API!!');
+        localStorage.setItem('token', newUser.data.data.token);
+      });
+      this.newUser = {};
     };
   }
 
 })();
-
-// {
-//   "username": "drumpf",
-//   "avatar": "http://az616578.vo.msecnd.net/files/2016/04/24/6359712857427363911155185075_MakeAmericaGreatAgain.jpg",
-//   "email": "drumpf@gmail.com",
-//   "password": "password",
-//   "dob": "1901-10-29",
-//   "address": {
-//   "geo": {
-//     "lng": 0,
-//     "lat": 0
-//   }
-//   },
-//   "slug": "drumpf1",
-// }

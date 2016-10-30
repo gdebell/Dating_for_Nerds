@@ -35,7 +35,7 @@
       </div>
       <div class="input-field col s5">
         <input id="password" type="password" ng-model="register.password">
-        <label for="password">Password</label>
+        <label for="password">Password (8 Characters)</label>
       </div>
 
     </div>
@@ -45,13 +45,13 @@
         <div class="input-field col s1">
         </div>
         <div class="input-field col s5">
-          <input id="first_name" type="text" ng-model="register.first_name">
+          <input id="first_name" type="text" ng-model="register.names.firstName">
           <label for="first_name">First Name</label>
         </div>
         <div class="input-field col s1">
         </div>
         <div class="input-field col s5">
-          <input id="last_name" type="text" ng-model="register.last_name">
+          <input id="last_name" type="text" ng-model="register.names.lastName">
           <label for="last_name">Last Name</label>
         </div>
       </div>
@@ -63,7 +63,7 @@
         </div>
         <div class="input-field col s5">
           <input id="dob" type="text" ng-model="register.dob">
-          <label for="dob">Birthdate</label>
+          <label for="dob">Birthdate- 'YYYY-MM-DD'</label>
         </div>
         <div class="input-field col s1">
         </div>
@@ -78,61 +78,22 @@
       <div class="row">
         <div class="input-field col s1">
         </div>
-        <div class="input-field col s1">
-          <input id="gender" type="text" ng-model="register.gender">
-          <label for="gender">Gender</label>
-        </div>
-        <div class="input-field col s1">
-        </div>
-        <div class="input-field col s9">
-          <input id="description" type="text" ng-model="register.description">
-          <label for="description">Description</label>
-        </div>
-      </div>
-    </div>
 
-    <div class="input-field col s12">
-      <div class="row">
-        <div class="input-field col s1">
+        <div class="input-field col s3">
+          <input id="lng" type="text" ng-model="register.address.geo.lng">
+          <label for="lng">Longitude</label>
         </div>
-
-        <div class="input-field col s4">
-          <input id="street" type="text" ng-model="register.street">
-          <label for="Street">Street</label>
-        </div>
-        <div class="input-field col s1">
-          <input id="suite" type="text" ng-model="register.suite">
-          <label for="Suite">Suite</label>
+        <div class="input-field col s">
+          <input id="lat" type="text" ng-model="register.address.geo.lat">
+          <label for="lat">Latitude</label>
         </div>
 
         <div class="input-field col s1">
         </div>
 
         <div class="input-field col s4">
-          <input id="city" type="text" ng-model="register.city">
-          <label for="City">City</label>
-        </div>
-        <div class="input-field col s1">
-          <input id="zip" type="number" ng-model="register.zip">
-          <label for="Zip">Zip</label>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="input-field col s12">
-      <div class="row">
-        <div class="input-field col s1">
-        </div>
-        <div class="input-field col s5">
-          <input id="phone" type="number" ng-model="register.phone">
-          <label for="phone">Phone</label>
-        </div>
-        <div class="input-field col s1">
-        </div>
-        <div class="input-field col s5">
-          <input id="website" type="text" ng-model="register.website">
-          <label for="website">Website</label>
+          <input id="slug" type="text" ng-model="register.slug">
+          <label for="slug">Slup</label>
         </div>
       </div>
     </div>

@@ -7,17 +7,23 @@
     .controller('membersController', membersController)
     .controller('memberController', memberController);
 
-  membersController.$inject = ['MemberService'];
+  membersController.$inject = ['MemberService', '$state'];
   memberController.$inject = ['PersonService', 'MemberService'];
 
   //bring in all members
-  function membersController(MemberService) {
+  function membersController(MemberService, $state) {
     /*jshint validthis: true */
     MemberService.getMembers()
     .then((resultsFromApi) => {
       this.allMembers = resultsFromApi;
       //console.log(this.allMembers);
     });
+
+    this.logOut = () => {
+      console.log('you clicked the logout btn!');
+      $state.go('home');
+      localStorage.clear();
+    };
   }
 
   //bring in the selected member's info:

@@ -9,27 +9,17 @@
 
   function logInController(AuthService, $state) {
     /*jshint validthis: true */
-    console.log('you are in the log in controller!');
-
-    //login function
-    this.onSubmit = function (loginInfo) {
+    this.logIn = function (loginInfo) {
       AuthService.checkAuth(loginInfo)
-      .then((user) => {
-        console.log('made it past .then!!');
-        console.log(user);
-        console.log(user.data.data.user.names.firstName);
-        localStorage.setItem('token', user.data.data.token);
+      .then((data) => {
         $state.go('members');
       });
-      this.user = {};
     };
 
+    //register a new user function
     this.onClick = function (registerInfo) {
-      console.log('you clicked the register button');
-      console.log(registerInfo);
       AuthService.register(registerInfo)
       .then((newUser) => {
-        console.log('Submitted new user to API!!');
         localStorage.setItem('token', newUser.data.data.token);
         $state.go('members');
       });

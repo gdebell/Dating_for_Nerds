@@ -8,6 +8,7 @@
     .run(routeStart);
 
   function appConfig($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
     $stateProvider
     .state('home', {
       url: '/',

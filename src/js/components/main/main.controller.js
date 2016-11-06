@@ -10,7 +10,6 @@
 
   function mainController(MemberService) {
     /*jshint validthis: true */
-
     MemberService.getMembers()
     .then((resultFromApi) => {
       this.allMembers = resultFromApi;
@@ -18,7 +17,6 @@
     });
 
     this.mainPagePhotos = MemberService.photosArray;
-
   }
 
 })();

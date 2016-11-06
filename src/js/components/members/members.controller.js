@@ -16,11 +16,8 @@
     MemberService.getMembers()
     .then((resultsFromApi) => {
       this.allMembers = resultsFromApi;
-      //console.log(this.allMembers);
     });
-
     this.logOut = () => {
-      console.log('you clicked the logout btn!');
       $state.go('home');
       localStorage.clear();
     };
@@ -30,9 +27,8 @@
   function memberController(PersonService, MemberService) {
     /*jshint validthis: true */
     this.person = PersonService.selectedMember;
+    
     this.showOne = (person) => {
-        //console.log(person);
-        //console.log(person._id);
         let selPersonLat = person.address.geo.lat;
         let selPersonLong = person.address.geo.lng;
         this.person.selected = person;
@@ -41,22 +37,12 @@
         var interested = [];
         var selection = ['Not Sure', 'Friendship', 'Dating', 'Life Long Relationship'];
         for (var i = 0; i < person.interestedIn.length; i++) {
-          if (person.interestedIn[i] === 0) {
-            interested.push('Not Sure');
-          }
-          if (person.interestedIn[i] === 1) {
-            interested.push('Friendship');
-          }
-          if (person.interestedIn[i] === 2) {
-            interested.push('Dating');
-          }
-          if (person.interestedIn[i] === 3) {
-            interested.push('Life Long Relationship');
-          }
+          var interestNum = selection[person.interestedIn[0]];
+          interested.push(interestNum);
           this.person.interestedIn = interested;
         }
 
-        //check to see of the selected person is near by:
+        //check to see of the selected person is near galvanize:
         if (selPersonLat > -40 && selPersonLat < 120) {
           if (selPersonLong < -45 && selPersonLong > -185) {
             this.person.address = true;
@@ -64,8 +50,7 @@
         } else {
           this.person.address = false;
         }
-
-      };
-  }
+      }
+    }
 
 })();

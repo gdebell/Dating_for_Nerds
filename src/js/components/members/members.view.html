@@ -1,28 +1,15 @@
 <div class="row col s12 memberViewPage">
-
   <div>
     <nav>
       <div class="nav-wrapper #b39ddb deep-purple lighten-3">
         <a href="#" class="brand-logo">&nbsp;&nbsp;gDating</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="/#/search">Search</a></li>
-          <li><a href="/">My Profile</a></li>
           <li><a ng-click="memCtrl.logOut()">Logout</a></li>
         </ul>
       </div>
     </nav>
   </div>
-
   <div class="col s7">
-    <div class="row col s12">
-      <a class="btn #ffcc80 orange lighten-3">All</a>
-      <a class="btn #ffcc80 orange lighten-3">Popular</a>
-      <a class="btn #ffcc80 orange lighten-3" >Near Me</a>
-      <a class="btn #ffcc80 orange lighten-3">My Matches</a>
-      <a class="btn #ffcc80 orange lighten-3">Chatting</a>
-    </div>
-
-
     <div class="row col s12 listMembers" ng-repeat="members in memCtrl.allMembers">
       <div class="container allMembers" ng-controller="memberController as membCtrl">
         <img ng-src="{{members.avatar}}" height="50" width="50">
@@ -32,13 +19,7 @@
       </div>
     </div>
   </div>
-
   <div class="col s5">
     <div ui-view></div>
   </div>
-
 </div>
-
-
-
-<!-- {{memCtrl.allMembers}} -->

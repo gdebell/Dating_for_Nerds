@@ -10,7 +10,6 @@
   </nav>
 </div>
 <div class="row">
-
   <div class="input-field col s12">
     <div class="row">
       <div class="input-field col s1">
@@ -20,26 +19,21 @@
       </div>
     </div>
   </div>
-
   <form class="col s12 registerForm" ng-model="register" ng-submit="logCtrl.onClick(register)">
     <div class="row">
       <div class="input-field col s1">
       </div>
-
       <div class="input-field col s5">
         <input id="username" type="text" ng-model="register.username">
-        <label for="username">Username</label>
+        <label for="username">Username (At least 6 characters)</label>
       </div>
-
       <div class="input-field col s1">
       </div>
       <div class="input-field col s5">
         <input id="password" type="password" ng-model="register.password">
-        <label for="password">Password (8 Characters)</label>
+        <label for="password">Password (At least 8 Characters)</label>
       </div>
-
     </div>
-
     <div class="input-field col s12">
       <div class="row">
         <div class="input-field col s1">
@@ -56,14 +50,13 @@
         </div>
       </div>
     </div>
-
     <div class="input-field col s12">
       <div class="row">
         <div class="input-field col s1">
         </div>
         <div class="input-field col s5">
           <input id="dob" type="text" ng-model="register.dob">
-          <label for="dob">Birthdate- 'YYYY-MM-DD'</label>
+          <label for="dob">Birthdate YYYYMMDD (Must be at least 18 year old)</label>
         </div>
         <div class="input-field col s1">
         </div>
@@ -73,12 +66,10 @@
         </div>
       </div>
     </div>
-
     <div class="input-field col s12">
       <div class="row">
         <div class="input-field col s1">
         </div>
-
         <div class="input-field col s3">
           <input id="lng" type="text" ng-model="register.address.geo.lng">
           <label for="lng">Longitude</label>
@@ -87,17 +78,14 @@
           <input id="lat" type="text" ng-model="register.address.geo.lat">
           <label for="lat">Latitude</label>
         </div>
-
         <div class="input-field col s1">
         </div>
-
         <div class="input-field col s4">
           <input id="slug" type="text" ng-model="register.slug">
-          <label for="slug">Slup</label>
+          <label for="slug">Slup </label>
         </div>
       </div>
     </div>
-
     <div class="input-field col s12">
       <div class="row">
         <div class="input-field col s1">
@@ -108,7 +96,6 @@
         </div>
       </div>
     </div>
-
     <div class="input-field col s12">
       <div class="row">
         <div class="input-field col s1">
@@ -118,6 +105,5 @@
         </div>
       </div>
     </div>
-
   </form>
 </div>

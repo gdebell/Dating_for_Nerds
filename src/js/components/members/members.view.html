@@ -9,17 +9,24 @@
       </div>
     </nav>
   </div>
-  <div class="col s7">
-    <div class="row col s12 listMembers" ng-repeat="members in memCtrl.allMembers">
+  <div class="col s6 topMainPage">
+
+    <div class="row col s11 listMembers card deep-orange lighten-4" ng-repeat="members in memCtrl.allMembers">
       <div class="container allMembers" ng-controller="memberController as membCtrl">
-        <img ng-src="{{members.avatar}}" height="50" width="50">
-`         <p>{{members.names.firstName}}</p>
-          <p class="descrip">{{members.description}}</p>
-        <a ng-click="membCtrl.showOne(members)" ui-sref="members.member">Show Me More...</a>
+
+        <div class="col s7">
+          <img class="avatar" ng-src="{{members.avatar}}" height="150" width="150">
+        </div>
+
+        <div class="col s5 nameCard">
+`         <p>Name: {{members.names.firstName}}</p>
+          <a ng-click="membCtrl.showOne(members)" ui-sref="members.member">Show more...</a>
+        </div>
       </div>
     </div>
+
   </div>
-  <div class="col s5">
+  <div class="col s6">
     <div ui-view></div>
   </div>
 </div>

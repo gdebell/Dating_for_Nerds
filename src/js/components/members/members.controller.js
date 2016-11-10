@@ -5,7 +5,7 @@
   angular
     .module('myApp.components.members', [])
     .controller('membersController', membersController)
-    .controller('memberController', memberController);
+    .controller('memberController', memberController)
 
   membersController.$inject = ['MemberService', '$state'];
   memberController.$inject = ['PersonService', 'MemberService'];
@@ -27,7 +27,7 @@
   function memberController(PersonService, MemberService) {
     /*jshint validthis: true */
     this.person = PersonService.selectedMember;
-    
+
     this.showOne = (person) => {
         let selPersonLat = person.address.geo.lat;
         let selPersonLong = person.address.geo.lng;
@@ -50,7 +50,7 @@
         } else {
           this.person.address = false;
         }
-      }
-    }
+      };
+  }
 
 })();

@@ -13,7 +13,7 @@
     this.getMembers = (getInfo) => {
       if (this.members.length) return $q.resolve(this.members);
 
-      let gDatesApi =   'https://galvanize-student-apis.herokuapp.com/gdating/members?limit=600&offset=145';
+      let gDatesApi =   'https://galvanize-student-apis.herokuapp.com/gdating/members?limit=600&offset=149';
       return $http.get(gDatesApi)
       .then((results) => {
         this.members = results.data.data;

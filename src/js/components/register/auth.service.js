@@ -11,7 +11,7 @@
     this.checkAuth = function (user) {
       return $http({
         method: 'POST',
-        url: 'https://galvanize-student-apis.herokuapp.com/gdating/auth/login',
+        url: 'http://galvanize-student-apis.herokuapp.com/gdating/auth/login',
         data: user,
         headers: {'Content-Type': 'application/json'}
       })
@@ -25,7 +25,7 @@
     this.register = function (newUser) {
       return $http({
         method: 'POST',
-        url:'https://galvanize-student-apis.herokuapp.com/gdating/auth/register',
+        url:'http://galvanize-student-apis.herokuapp.com/gdating/auth/register',
         data: newUser,
         header: {'Content-Type': 'application/json'}
       });

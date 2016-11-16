@@ -25,7 +25,7 @@
       restricted: true
     })
     .state('members.member', {
-      templateUrl: 'js/components/members/partials/_member.view.html',
+      templateUrl: 'js/components/members/partials/member.view.html',
       controller: 'membersController',
       controllerAs: 'memCtrl',
       restricted: true

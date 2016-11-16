@@ -5,7 +5,7 @@
   angular
     .module('myApp.components.members', [])
     .controller('membersController', membersController)
-    .controller('memberController', memberController)
+    .controller('memberController', memberController);
 
   membersController.$inject = ['MemberService', '$state'];
   memberController.$inject = ['PersonService', 'MemberService'];

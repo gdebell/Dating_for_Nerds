@@ -18,7 +18,6 @@
       .then((user) => {
         this.loggedIn = user.data.data.user;
         localStorage.setItem('token', user.data.data.token);
-        console.log(user.data.data.user);
         return user.data.data.user;
       });
     };

@@ -1,8 +1,8 @@
-# Welcome to the gDating  Repo!
+# Welcome to the Dating for Nerds Repo!
 
-## What is gdataing?
+## What is Dating for Nerds
 
-### gDating is a dating website.  The website allows a user to look through other user's profiles.  A user must be logged in to access the site.  
+### Dating for Nerds is a dating website.  The website allows a user to look through other user's profiles.  A user must be logged in to access the site.  
 
 
 
@@ -14,11 +14,9 @@
 ### I also became familiar with Materialize to style my site.
 
 
+##Visit Dating for Nerds:
 
-
-##Visit gdating:
-
-###gh-pages: https://gdebell.github.io/gdating/
+https://gdebell.github.io/Dating_for_Nerds/
 
 ## Log In:
 ###Email: test01@gmail.com

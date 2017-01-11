@@ -15,8 +15,7 @@
 
 
 ##Visit Dating for Nerds:
-
-https://gdebell.github.io/Dating_for_Nerds/
+https://gdating-f9760.firebaseapp.com/#/
 
 ## Log In:
 ###Email: test01@gmail.com
